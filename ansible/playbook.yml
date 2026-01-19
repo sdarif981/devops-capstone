@@ -1,0 +1,12 @@
+- name: Basic server setup
+  hosts: servers
+  tasks:
+    - name: Create application directory
+      file:
+        path: C:\temp\devops
+        state: directory
+
+    - name: Create info file
+      copy:
+        content: "Ansible setup successful"
+        dest: C:\temp\devops\info.txt
