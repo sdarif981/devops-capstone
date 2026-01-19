@@ -1,4 +1,7 @@
-# DevOps Capstone Project
+# DevOps Capstone
 
-This project demonstrates basic DevOps practices using Git, Jenkins,
-Maven, Ansible, and CI/CD pipelines.
+This repository contains hands-on DevOps exercises including:
+- Git
+- Jenkins
+- CI/CD
+- Ansible

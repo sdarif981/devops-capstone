@@ -1,8 +1,9 @@
-# Maven
-target/
-
-# Environment files
-.env
-
 # Logs
 *.log
+
+# Jenkins
+.jenkins/
+
+# OS files
+Thumbs.db
+.DS_Store
