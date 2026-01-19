@@ -2,32 +2,26 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Building application'
+                echo 'Checking out code from GitHub'
             }
         }
 
-       stage('Test') {
-    steps {
-        echo 'Running tests'
-        echo 'All tests passed'
-    }
-}
-
-        stage('Deploy') {
+        stage('Infrastructure Deployment') {
             steps {
-                echo 'Deploying application'
+                echo 'Running Ansible playbook via Jenkins'
+                echo 'ansible-playbook -i ansible/inventory.ini ansible/playbook.yml'
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline completed successfully'
+            echo 'Infrastructure change executed via Jenkins'
         }
         failure {
-            echo 'Pipeline failed due to test errors'
+            echo 'Infrastructure change failed'
         }
     }
 }
