@@ -11,6 +11,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests'
+                error('Unit test failed')
             }
         }
 
@@ -26,7 +27,7 @@ pipeline {
             echo 'Pipeline completed successfully'
         }
         failure {
-            echo 'Pipeline failed'
+            echo 'Pipeline failed due to test errors'
         }
     }
 }
